@@ -1,26 +1,246 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(10, 10, 10, 0.9);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.nav-logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #00ff87;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: #aaaaaa;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00ff87;
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  padding: 80px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: #00ff87;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #aaaaaa;
+  margin-top: 16px;
+}
+
+.hero a {
+  margin-top: 32px;
+  padding: 14px 32px;
+  background-color: #00ff87;
+  color: #0a0a0a;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 6px;
+  width: fit-content;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.hero a:hover {
+  background-color: #00cc6a;
+}
+
+/* Sobre mí */
+.sobre-mi {
+  min-height: 100vh;
+  padding: 80px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #111111;
+}
+
+.sobre-mi h2 {
+  font-size: 36px;
+  color: #00ff87;
+  margin-bottom: 24px;
+}
+
+.sobre-mi p {
+  font-size: 18px;
+  color: #cccccc;
+  max-width: 700px;
+  line-height: 1.8;
+}
+
+/* Habilidades */
+.habilidades {
+  min-height: 100vh;
+  padding: 80px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.habilidades h2 {
+  font-size: 36px;
+  color: #00ff87;
+  margin-bottom: 32px;
+}
+
+.habilidades ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.habilidades ul li {
+  background-color: #1a1a1a;
+  border: 1px solid #00ff87;
+  color: #00ff87;
+  padding: 10px 24px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Proyectos */
+.proyectos {
+  min-height: 100vh;
+  padding: 80px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #111111;
+}
+
+.proyectos h2 {
+  font-size: 36px;
+  color: #00ff87;
+  margin-bottom: 32px;
+}
+
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background-color: #1a1a1a;
+  border: 1px solid #222222;
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: border-color 0.3s;
+}
+
+.card:hover {
+  border-color: #00ff87;
+}
+
+.card h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 15px;
+  color: #aaaaaa;
+  line-height: 1.7;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags span {
+  background-color: #0a0a0a;
+  border: 1px solid #333333;
+  color: #00ff87;
+  padding: 4px 14px;
+  border-radius: 100px;
+  font-size: 13px;
+}
+
+.card a {
+  color: #00ff87;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: auto;
+}
+
+/* Contacto */
+.contacto {
+  min-height: 100vh;
+  padding: 80px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contacto h2 {
+  font-size: 36px;
+  color: #00ff87;
+  margin-bottom: 16px;
+}
+
+.contacto p {
+  font-size: 17px;
+  color: #aaaaaa;
+  margin-bottom: 32px;
+}
+
+.contacto-info p {
+  font-size: 16px;
+  color: #cccccc;
+  margin-bottom: 12px;
 }
