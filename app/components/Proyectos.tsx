@@ -3,13 +3,13 @@ const proyectos = [
     titulo: "API de Gestión de Tareas",
     descripcion: "API REST completa con autenticación JWT, Node.js, TypeScript y PostgreSQL.",
     tags: ["Node.js", "TypeScript", "PostgreSQL"],
-    github: "#"
+    github: "https://github.com/Sebastian12234/api-tareas"
   },
   {
     titulo: "Dashboard de Métricas",
     descripcion: "Sistema de visualización de métricas de pruebas automatizadas con Power BI.",
     tags: ["Power BI", "SQL Server", "Node.js"],
-github: "https://github.com/Sebastian12234/api-tareas"
+    github: "#"
   },
   {
     titulo: "API E-commerce",
