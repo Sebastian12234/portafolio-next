@@ -9,7 +9,7 @@ const proyectos = [
     titulo: "Dashboard de Métricas",
     descripcion: "Sistema de visualización de métricas de pruebas automatizadas con Power BI.",
     tags: ["Power BI", "SQL Server", "Node.js"],
-    github: "#"
+github: "https://github.com/Sebastian12234/api-tareas"
   },
   {
     titulo: "API E-commerce",
